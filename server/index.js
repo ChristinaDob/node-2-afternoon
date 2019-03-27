@@ -29,7 +29,7 @@ app.delete(`${messagesBaseUrl}/:id`, mc.delete);
 
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`Server listening on port ${port}`);
+  console.log(`My server is listening on port: ${PORT}`);
 });
 
 // LAST STEP ** Open http://localhost:3001/ to see the front-end interact with the API.
