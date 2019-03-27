@@ -48,11 +48,14 @@ module.exports = {
     res.status(200).send(messages);
   },
 
-  // Should be able to delete a message using an id url parameter. All methods should send a response of the updated messages array.
-  // The delete method should delete a message using the value of id from the request url parameters.
+  // Should be able to delete a message using an id url parameter.
+  // All methods should send a response of the updated messages array.
+  // The delete method should delete a message using the value of id
+  // from the request url parameters.
   delete: (req, res) => {
     const deleteID = req.params.id;
-    // We can use .findIndex again with the id to get the index of the message object and then use .splice to remove it from the messages array.
+    // We can use .findIndex() again with the id to get the index of the
+    // message object and then use .splice to remove it from the messages array.
     messageIndex = messages.findIndex(message => message.id == deleteID);
     messages.splice(messageIndex, 1);
     // We'll then want to send the updated messages array.
