@@ -23,8 +23,8 @@ app.get(messagesBaseUrl, mc.read);
 app.put(`${messagesBaseUrl}/:id`, mc.update);
 app.delete(`${messagesBaseUrl}/:id`, mc.delete);
 
-const port = 3001;
-app.listen(port, () => {
+const PORT = 3001;
+app.listen(PORT, () => {
   console.log(`Server listening on port ${port}`);
 });
 
